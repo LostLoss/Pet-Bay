@@ -38,9 +38,40 @@ const DogFoodResults = () => {
   );
 };
 
+const MunchkinResults = () => {
+  return (
+    <div className='search-results-box'>
+      <Result
+        image="img/wilkie.jpg"
+        title="Wilkie - Munchkin & Domestic Short Hair Mix"
+        description="This “golden boy” could not be any more laid-back or sweet. He was very ill at a rural shelter when he was rescued and after lots of love, good food and medical treatment, he has become an awesome kitten. His favorite toy is the cardboard incline and he has been paired up with a little girl named Addie Belle. To say that he loves her and watches over her would be an understatement. He would love to be adopted into a special loving home, along with his girl!! By the way, Addie Belle is a special needs baby and keeping these two together is their dream of a happy ending, or should we say beginning! You will adore Wilkie and his protective ways. Are you up for a super sweet pair of sunny orange delights? Double the fun; what could be better?"
+        linkDescription="Max Pet Shop"
+      />
+      <Result
+        image="img/hans.jpg"
+        title="Hans So Low"
+        description="Hans So Low is a 2-3 yr old MN Munchkin cat (no papers). This handsome and affectionate boy needs to be the SOLO cat (fits his name). Rescued as a stray in July, we do not know his history. He does not like other cats and will stalk and attack them. He does well with dogs and birds. Solo is an outgoing, friendly guy that likes to hang out where people are and sit in laps. If he is overly petted, he may nip. So, he may not be the best fit in a household with very young children. If you think Solo is a good fit for your family, please fill out an application."
+        linkDescription="Cat shelter"
+      />
+      <Result
+        image="img/sassy.jpg"
+        title="Sassy"
+        description=""
+        linkDescription="PetCity"
+      />
+    </div>
+  );
+};
+
 const GermanShepherdResults = () => {
   return (
     <div className='search-results-box'>
+        <Result
+          image="img/avalon.jpg"
+          title="Avalon - German Shepherd Dog Mix"
+          description="Avalon just joined us from the Butte County Fire zone. She is an adorable girl with big satellite ears who wants nothing more than to play fetch with her squeaky ball all day then snuggle up on the couch with her people once she's tired. She's a smart, social pup who is potty trained and knows her sit and lay down commands. With her smarts, she would be a dream dog for an active person who will be patient in working on her leash skills and mouthiness. She loves being with people and will hang out and ask for belly rubs in whichever room you're in. We do not know how she is with cats, so best home for her would be cat-less."
+          linkDescription="Tasos Pet Shop"
+        />
       <Result
         image="img/dory.jpg"
         title="Dory - German Shepherd"
@@ -58,12 +89,6 @@ const GermanShepherdResults = () => {
         title="Nora - German Shepherd"
         description=""
         linkDescription="MyPetShop"
-      />
-      <Result
-        image="img/avalon.jpg"
-        title="Avalon - German Shepherd Dog Mix"
-        description="Avalon just joined us from the Butte County Fire zone. She is an adorable girl with big satellite ears who wants nothing more than to play fetch with her squeaky ball all day then snuggle up on the couch with her people once she's tired. She's a smart, social pup who is potty trained and knows her sit and lay down commands. With her smarts, she would be a dream dog for an active person who will be patient in working on her leash skills and mouthiness. She loves being with people and will hang out and ask for belly rubs in whichever room you're in. We do not know how she is with cats, so best home for her would be cat-less."
-        linkDescription="Tasos Pet Shop"
       />
     </div>
   );
@@ -83,10 +108,15 @@ class SearchResults extends React.Component {
   render() {
     if (this.props.showResults) {
         if (this.props.searchTerm.includes('german shepherd') ||
-            this.props.searchTerm.includes('german shepherds')) {
+            this.props.searchTerm.includes('german shepherds') ||
+            this.props.searchTerm.includes('dog')) {
           return <GermanShepherdResults />;
         } else if (this.props.searchTerm.includes('dog food')) {
           return <DogFoodResults />;
+        } else if (this.props.searchTerm.includes('munchkin') ||
+            this.props.searchTerm.includes('munchkin cat') ||
+            this.props.searchTerm.includes('munchkins')) {
+          return <MunchkinResults />;
         } else {
           return <NoResults value={this.props.searchTerm}/>;
         }
