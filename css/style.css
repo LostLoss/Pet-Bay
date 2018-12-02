@@ -356,3 +356,8 @@ body{
   padding: 1rem;
   letter-spacing: 1px;
 }
+
+.mission-statement {
+  font-size: 20px;
+  font-weight: bolder;
+}
