@@ -20,7 +20,7 @@ const DogFoodResults = () => {
         image="img/food3.jpg"
         title="Merrick Grain Free Real Texas Beef + Sweet Potato Dry Dog Food"
         description="The Best Dog Ever deserves the Best Food Ever. That's why Merrick's grain-free recipes provide only the best to your best friend in quality, nutrition and taste. Merrick grain-free recipes start with real deboned meat, fish or poultry as the 1 ingredient for a high protein, nutritious grain-free meal, along with farm-fresh fruits and vegetables like sweet potatoes, blueberries, peas and more."
-        linkDescription=""
+        linkDescription="Max Pet Shop"
       />
       <Result
         image="img/food1.jpg"
@@ -42,12 +42,6 @@ const GermanShepherdResults = () => {
   return (
     <div className='search-results-box'>
       <Result
-        image="img/avalon.jpg"
-        title="Avalon - German Shepherd Dog Mix"
-        description="Avalon just joined us from the Butte County Fire zone. She is an adorable girl with big satellite ears who wants nothing more than to play fetch with her squeaky ball all day then snuggle up on the couch with her people once she's tired. She's a smart, social pup who is potty trained and knows her sit and lay down commands. With her smarts, she would be a dream dog for an active person who will be patient in working on her leash skills and mouthiness. She loves being with people and will hang out and ask for belly rubs in whichever room you're in. We do not know how she is with cats, so best home for her would be cat-less."
-        linkDescription="Tasos Pet Shop"
-      />
-      <Result
         image="img/dory.jpg"
         title="Dory - German Shepherd"
         description=""
@@ -64,6 +58,12 @@ const GermanShepherdResults = () => {
         title="Nora - German Shepherd"
         description=""
         linkDescription="MyPetShop"
+      />
+      <Result
+        image="img/avalon.jpg"
+        title="Avalon - German Shepherd Dog Mix"
+        description="Avalon just joined us from the Butte County Fire zone. She is an adorable girl with big satellite ears who wants nothing more than to play fetch with her squeaky ball all day then snuggle up on the couch with her people once she's tired. She's a smart, social pup who is potty trained and knows her sit and lay down commands. With her smarts, she would be a dream dog for an active person who will be patient in working on her leash skills and mouthiness. She loves being with people and will hang out and ask for belly rubs in whichever room you're in. We do not know how she is with cats, so best home for her would be cat-less."
+        linkDescription="Tasos Pet Shop"
       />
     </div>
   );
